@@ -81,7 +81,7 @@ a:hover {
   padding-right: 450px;
 }
 
-@media screen and (max-width: 1610px) {
+@media screen and (max-width: 1280px) {
 
   nav{
     position: absolute;
@@ -232,7 +232,7 @@ transform: rotateZ(45deg);
 }
 }
 
-@media screen and (max-width: 1610px) {
+@media screen and (max-width: 1280px) {
   #hero {
     height: 83vh;
     margin-bottom: 6rem;
