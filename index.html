@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Waste Facility Locator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script>history.scrollRestoration = "manual"</script>
+  </head>
+  <body>
+
+<!-- Navbar -->
+
+<div class="navbar">  
+  <nav id="nav">
+    <div class="logo"><a href="./index.html">E-Waste Facility Locator</a></div>
+    <div class="menu-bar">
+      <div class="menu-tabs">
+        <li><a href="#profile">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Feedback</a></li>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- Navbar -->
+
+<!-- Hero Section -->
+
+<section id="hero">
+  <div class="down-arrow"></div>
+  <div class="hero-image">
+    <img src="./assets/profile-pic.png" alt="hero-image" />
+  </div>
+  <div class="hero-text">
+    <p>Let Your Old Device Help The</p>
+    <h1>Environment</h1>
+    <div class="hero-btn">
+      <button method="get" target="_blank" class="hero-map-btn" onclick="window.location.href='https://www.google.com/maps/search/hospital+near+me/'"><span>Locate Your Nearest Facility</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- Hero Section -->
+
+<!-- About Section -->
+
+<section id="about">
+  <div class="header">
+    <h3>About E-Waste Facility</h3>
+    <hr class="line" />
+  </div>
+  <div class="content">
+    <div class="feature1">
+      <i class="icon fa fa-sun"></i>
+      <h6>WHO E-WASTE FACILITY ARE!</h6>
+      <h4>New Age Recyclers</h4>
+      <p>We are a new age techno-commercial E-waste recycling expert, enabling the environmental value-chain for all.</p>
+    </div>
+    <div class="feature2" id="second">
+      <i class="icon fa fa-recycle"></i>
+      <h6>WHAT E-WASTE FACILITY DO!</h6>
+      <h4>Recycling Solutions</h4>
+      <p>All The Precious Materials Inside Your Device.</p>
+    </div>
+    <div class="feature3" >
+      <i class="icon fa fa-seedling"></i>
+      <h6>OUR GOAL</h6>
+      <h4>Environmental Sustainability</h4>
+      <p>We keep the environment first and bring in the purpose to address related issues and build a co-existing ecology.</p>
+    </div>
+  </div>
+  <div class="counter">
+    <div class="container">
+      <i class="fa-solid fa-house-chimney"></i>
+      <span class="num" data-val="333">000</span>
+      <span class="text">E-waste Facility</span>
+    </div>
+
+    <div class="container">
+      <i class="fa-sharp fa-solid fa-recycle"></i>
+      <span class="num" data-val="22">000</span>
+      <span class="text">E-waste Recycled</span>
+    </div>
+
+    <div class="container">
+      <i class="fa-solid fa-business-time"></i>
+      <span class="num" data-val="116">000</span>
+      <span class="text">People Hired</span>
+    </div>
+
+    <div class="container">
+      <i class="fa-solid fa-percent"></i>
+      <span class="num" data-val="100">000</span> 
+      <span class="text">Environment Protection</span>
+    </div>
+  </div>
+  <script>
+    let valueDisplays = document.querySelectorAll(".num");
+    let interval = 4000;
+
+    valueDisplays.forEach((valueDisplay) => {
+      let startValue = 0;
+      let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+      let duration = Math.floor(interval / endValue);
+      let counter = setInterval(function () {
+        startValue += 1;
+        valueDisplay.textContent = startValue;
+        if (startValue == endValue) {
+            clearInterval(counter);
+        }
+      }, duration);
+    });
+
+  </script>
+</section>
+
+<!-- About Section -->
+
+<!-- Service Section -->
+
+<section id="services">
+  <div class="service-left">
+    <h1>Our Services And Solutions</h1>
+      <div class="box">
+        <div class="container1">
+          <h4> Data Center Decommissioning</h4>
+          <i class="fa-solid fa-database fa-2xl" style="color: #1acc8d;"></i>
+        </div>
+        <div class="container2">
+          <h4>Enterprise Asset Disposition</h4>
+          <i class="fa-solid fa-house-chimney fa-2xl" style="color: #1acc8d;"></i>
+        </div>
+        <div class="container3">
+          <h4>Environmental Reporting</h4>
+          <i class="fa-solid fa-leaf fa-2xl" style="color: #1acc8d;"></i>
+        </div>
+      </div>   
+  </div>
+  <div class="service-mid">
+    <h1>Our Services And Solutions</h1>
+      <div class="box">
+        <div class="container">
+          <img class="middle-img" src="img/download.jpg" alt="">
+        </div>
+      </div>    
+  </div>        
+  <div class="service-right">
+    <div class="box">
+      <div class="container4">
+        <i class="fa-solid fa-lightbulb fa-2xl" style="color: #1acc8d;"></i>
+        <h4>Optimized Innovation</h4>
+      </div>
+      <div class="container5">
+        <i class="fa-solid fa-microchip fa-2xl" style="color: #1acc8d;"></i>
+        <h4>Product Technology</h4>
+      </div>
+      <div class="container6">
+        <i class="fa-solid fa-recycle fa-2xl" style="color: #1acc8d;"></i>
+        <h4>Reverse Supply Chain</h4>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Service Section -->
+
+<!-- FAQ Section -->
+
+<section id="faq">
+  <div class="box">
+    <h1 class="heading">Frequently Asked Questions</h1>
+    <div class="faqs">
+      <details>
+        <summary>What is E-waste?</summary>
+        <p>
+          E-waste, short for electronic waste, refers to discarded electronic
+          devices and equipment. It includes items like old computers,
+          smartphones, tablets, televisions, printers, and more.
+        </p>
+      </details>
+      <details>
+        <summary>What is the proper way to dispose E-waste?</summary>
+        <p>
+          To dispose of e-waste properly, take it to certified e-waste
+          recycling centers or collection events. Don't throw it in regular
+          trash. Recycling facilities can safely extract valuable materials
+          and dispose of hazardous substances. Additionally, consider donating
+          or reselling still-functional electronics to reduce waste.
+        </p>
+      </details>
+      <details>
+        <summary>How much time is taken to recycle E-waste?</summary>
+        <p>
+          The time required to recycle e-waste varies based on factors like
+          the type and quantity of items, recycling methods, and facility
+          capacity. On average, it can take several weeks to process and
+          recycle e-waste, but more complex or large-scale operations may take
+          longer. Efficient recycling helps recover valuable materials and
+          reduce environmental impact.
+        </p>
+      </details>
+
+      <details>
+        <summary>Which precious metals we can extract from E-waste?</summary>
+        <p>
+          The time required to recycle e-waste varies based on factors like
+          the type and quantity of items, recycling methods, and facility
+          capacity. On average, it can take several weeks to process and
+          recycle e-waste, but more complex or large-scale operations may take
+          longer. Efficient recycling helps recover valuable materials and
+          reduce environmental impact.
+        </p>
+      </details>
+      <details>
+        <summary>
+          How much wealth can we generate from E-waste approximately?
+        </summary>
+        <p>
+          The wealth generated from e-waste recycling can vary widely based on
+          factors like the quantity and quality of materials recovered, market
+          prices, and recycling efficiency. However, it's estimated that
+          globally, e-waste contains billions of dollars' worth of precious
+          metals and recyclable materials, making it a valuable resource for
+          both the economy and the environment.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+
+</body>
+</html>
