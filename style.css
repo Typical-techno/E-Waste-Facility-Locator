@@ -698,50 +698,91 @@ transform: rotateZ(45deg);
   background-color: white;
   width: 100%;
   margin: 0;
+  padding: 50px;
+  height: 65vh;
 }
 
-  #faq .box {
-    width: 100%;
-    margin: 100px auto;
-    background: #fff;
-    border-radius: 10px;
-  }
-  #faq h1 {
-    text-align: center;
-    font-size: 40px;
-  }
-  #faq summary {
-    color: #000000;
-    text-shadow: 1px 1px 1px 1px black;
-  }
-  #faq .box.heading {
-    background: #6d6fffe8;
-    border-radius: 7px 7px 0px 0px;
-    padding: 10px;
-    color: #fff;
-    text-align: center;
-  }
-  #faq .faqs {
-    padding: 0px 20px 20px;
-    transition: all 0.3s;
-  }
-  ::webkit-details-marker {
-    float: right;
-    margin-top: 3px;
-  }
-  #faq details {
-    background: #6d6fffe8;
-    padding: 10px;
-    border-radius: 7px;
-    margin-top: 20px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    transition: all 0.3s;
-  }
-  #faq details summary {
-    outline: none;
-  }
+#faq h1{
+  margin: 0px 300px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+}
 
-  #faq p{
-    color: white;
-  }
+#faq hr.line {
+  height: 2px;
+  width: auto;
+  background: #8e1efc;
+  margin: 10px 800px 50px 800px;
+  display: flex;
+  justify-content: center;
+}
+
+#faq .faq-question i{
+  color: #7a60ff;
+  transition: all 0.3s;
+  margin: auto 5px;
+}
+
+#faq .faq-question:hover i{
+  color: white;
+  transform: rotate(360deg);
+}
+
+#faq .faq-answer i{
+  margin: auto 5px;
+  transition: all 0.3s;
+  color: #7a60ff;
+}
+
+#faq .faq-answer:hover i{
+  color: white;
+  transform: rotate(360deg);
+}
+
+#faq .faq-item{
+  margin: 10px 300px;
+  background-color: white;
+}
+#faq .faq-question {
+  background-color: rgb(240, 230, 230);
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 20px auto;
+  transition: all 0.3s;
+}
+#faq .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: all 0.2s;
+  border: 2px solid black;
+  border-radius: 7px;
+  display: none;
+  transition: all 0.3s;
+  background-color: white;
+}
+
+#faq .faq-question:hover{
+  box-shadow: 10px 10px black;
+  color: white;
+  background-color: #7a60ff;
+}
+
+#faq .faq-item:hover .faq-answer {
+  max-height: 1000px;
+  padding: 10px;
+  height: auto;
+  display: inline-block;
+}
+
+#faq .faq-item:hover p{
+  display: inline;
+}
+
+#faq .faq-answer:hover{
+  box-shadow: 10px 10px black;
+  background-color: #7a60ff;
+  color: white;
+}
