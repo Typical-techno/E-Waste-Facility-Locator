@@ -30,6 +30,35 @@
 
 <!-- Navbar -->
 
+<!-- Pop-up Section -->
+<div id="popup">
+  <div class="popup">
+    E-Waste Generation: Electronic waste, or e-waste, refers to discarded electronic devices and equipment, including smartphones, laptops, tablets, televisions, and more. The generation of e-waste has been steadily increasing due to the rapid pace of technological advancement and consumer electronics turnover.
+    </div>
+    <div class="close">
+    <i onclick="hidePopup()" class="fa-solid fa-circle-xmark fa-xl"> Close</i>
+  </div>
+</div>
+
+<script>
+  // Function to show the pop-up
+  function showPopup() {
+      document.getElementById('popup').style.display = 'inline-flex';
+  }
+
+  // Function to hide the pop-up
+  function hidePopup() {
+      document.getElementById('popup').style.display = 'none';
+  }
+
+  // Show the pop-up when the page loads
+  window.addEventListener('load', showPopup);
+
+  // Show the pop-up every 10 seconds
+  setInterval(showPopup, 5000);
+</script>
+<!-- Pop-up Section -->
+
 <!-- Hero Section -->
 
 <section id="hero">
@@ -41,7 +70,7 @@
     <p>Let Your Old Device Help The</p>
     <h1>Environment</h1>
     <div class="hero-btn">
-      <button method="get" target="_blank" class="hero-map-btn" onclick="window.location.href='https://www.google.com/maps/search/hospital+near+me/'"><span>Locate Your Nearest Facility</span></button>
+      <button method="get" target="_blank" class="hero-map-btn" onclick="window.location.href='https://www.google.com/maps/search/E-waste+facility+near+me/'"><span>Locate Your Nearest Facility</span></button>
     </div>
   </div>
 </section>
@@ -125,8 +154,8 @@
 <!-- Service Section -->
 
 <section id="services">
+  <h1>Our Services And Solutions</h1>
   <div class="service-left">
-    <h1>Our Services And Solutions</h1>
       <div class="box">
         <div class="container1">
           <h4> Data Center Decommissioning</h4>
@@ -235,7 +264,9 @@
 <!-- Feedback -->
 <footer>
   <section id="feedback">
-    <h1>Feedback</h1>
+    <div class="title">
+      <h1>Feedback</h1>
+    </div>
     <div class="form">
       <div class="container">
         <div class="contactInfo"> 
