@@ -1343,7 +1343,6 @@ transform: rotateZ(45deg);
   color: #000000;
   padding: 10px;
   border-radius: 5px;
-  /* display: none; */
   z-index: 999999;
   align-items: center;
   transition: all 0.5s;
