@@ -1373,6 +1373,7 @@ transform: rotateZ(45deg);
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  transition: all 0.5s;
 }
 
 #popup .close:hover{
