@@ -1343,7 +1343,7 @@ transform: rotateZ(45deg);
   color: #000000;
   padding: 10px;
   border-radius: 5px;
-  display: none;
+  /* display: none; */
   z-index: 999999;
   align-items: center;
   transition: all 0.5s;
@@ -1359,12 +1359,12 @@ transform: rotateZ(45deg);
   cursor: pointer;
 }
 
-#popup .popup{
+#popup #popupc{
   width: 50vh;
   padding: 5px;
 }
 
-#popup .close{
+#popup #close{
   margin: 9px 15px 0 15px;
   writing-mode: vertical-lr;
   height: 150px;
@@ -1376,6 +1376,6 @@ transform: rotateZ(45deg);
   transition: all 0.5s;
 }
 
-#popup .close:hover{
+#popup #close:hover{
   background-color: red;
 }
