@@ -31,7 +31,7 @@ function hidePopup() {
     setTimeout(showPopup, 5000);
 }
 
-showPopup()
+setTimeout(showPopup, 3000);
 
 closeButton.addEventListener('click', () => {
     hidePopup();
