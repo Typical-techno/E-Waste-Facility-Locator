@@ -28,7 +28,7 @@ let currentMessageIndex = 0;
 
 function hidePopup() {
     popup.style.display = 'none';
-    setTimeout(showPopup, 5000);
+    setTimeout(showPopup, 15000);
 }
 
 setTimeout(showPopup, 3000);
