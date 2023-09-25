@@ -21,7 +21,7 @@ let currentMessageIndex = 0;
   function showPopup() {
     const message = messages[currentMessageIndex % messages.length];
     popupc.textContent = message;
-    popupc.innerHTML = message;
+
     popup.style.display = 'inline-flex';
     currentMessageIndex++
   }
@@ -33,10 +33,7 @@ function hidePopup() {
 
 setTimeout(showPopup, 3000);
 
-closeButton.addEventListener('click', () => {
-    hidePopup();
-
-});
+;
 
 // Pop up Section
 
