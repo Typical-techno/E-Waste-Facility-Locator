@@ -41,10 +41,6 @@ section {
 
 /* Navbar */
 
-#navbar{
-  display: flex;
-  justify-content: center;
-}
 
 nav{
   position: fixed;
@@ -296,7 +292,6 @@ transform: rotateZ(45deg);
   height: 135px;
   border-radius: 100px;
   background: #7a60ff;
-  background:  linear-gradient(to left, #6d6fffe8, #6d6fffe8);
   color: #ffffff;
   font-size: 50px;
   line-height: 135px;
@@ -443,13 +438,6 @@ transform: rotateZ(45deg);
   pad: 0.7em 0;
   font-weight: 600;
   line-height: 0;
-}
-#about .counter span.percentage {
-  color: #ffffff;
-  display: grid;
-  place-items: center;
-  font-weight: 600;
-  font-size: 3em;
 }
 
 @media screen and (max-width: 1366px) {
