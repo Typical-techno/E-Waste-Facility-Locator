@@ -1372,27 +1372,4 @@ transform: rotateZ(45deg);
     #popupc{
       font-size: 12px;
     }
-
-    #navbar-m{
-      display: flex;
-      justify-content: center;
-      border-radius: 10px;
-      background-color: #777;
-      position: absolute;
-      top:90%;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-
-    #navbar-m .icons i{
-      display: inline-flex;
-      justify-content: center;
-      margin: 30px 20px;
-    }
-
-    #navbar-m .user-p{
-      display: flex;
-      justify-content: right;
-    }
-}
+  }
