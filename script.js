@@ -24,12 +24,12 @@ let currentMessageIndex = 0;
 
     popup.style.display = 'inline-flex';
     currentMessageIndex++
-  }
+  };
 
 function hidePopup() {
     popup.style.display = 'none';
     setTimeout(showPopup, 30000);
-}
+};
 
 setTimeout(showPopup, 3000);
 
@@ -55,3 +55,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     });
 // About Section Counter
+

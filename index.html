@@ -23,7 +23,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#">Login/SignUp</a></li>
       </div>
     </div>
   </nav>
@@ -54,11 +54,45 @@
       <button method="get" target="_blank" class="hero-map-btn" onclick="window.location.href='https://www.google.com/maps/search/E-waste+facility+near+me/'"><span>Locate Your Nearest Facility</span></button>
     </div>
   </div>
+  <div id="Register">
+  <div class="form">
+    <div class="container">
+      <div class="registerform">
+        <h2>Register Your Device</h2>
+        <div class="formBox">
+          <div class="inputBox">
+            <input type="text" id="name" required>
+            <span>Your Full Name</span>
+          </div>
+          <div class="inputBox">
+            <input type="text" id="device-company" required>
+            <span>Device's Company</span>
+          </div>
+          <div class="inputBox">
+            <input type="email" id="device-model" required>
+            <span>Model Number</span>
+          </div>
+          <div class="inputBox">
+            <input type="text" id="mobile-number" required>
+            <span>Mobile Number</span>
+          </div>
+          <div class="inputBox-b">
+            <button type="submit" value="Register" id="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div> 
+</div>
 </section>
 
 <!-- Hero Section -->
 
-
+<!-- Register Device -->
+<!-- <section id="feedback">
+     
+</section> -->
+<!-- Register Device -->
 
 <!-- About Section -->
 
@@ -228,64 +262,12 @@
 
 <!-- Feedback -->
 <footer>
-  <section id="feedback">
-    <div class="title">
-      <h1>Feedback</h1>
-    </div>
-    <div class="form">
-      <div class="container">
-        <div class="contactInfo"> 
-          <h2>Contact Info</h2>
-          <ul class="info">
-            <li>
-              <span><i class="fa-solid fa-location-dot fa-xl"></i></span>
-              <span>Maharshi Dayanand University Near Delhi Bypass Rohtak Haryana 124001</span>
-            </li>
-            <li>
-              <span><i class="fa fa-envelope fa-xl" aria-hidden="true"></i></span>
-              <span>contact@gmail.com</span>
-            </li>
-            <li>
-              <span><i class="fa-solid fa-phone fa-xl"></i></span>
-              <span>+91 1800 000 000</span>
-            </li>
-          </ul>
-        </div>
-        <div class="contactForm">
-          <h2>Feedback</h2>
-          <div class="formBox">
-            <div class="inputBox w50">
-              <input type="text" name="" required>
-              <span>Name</span>
-            </div>
-            <div class="inputBox w50">
-              <input type="text" required>
-              <span>Last Name</span>
-            </div>
-            <div class="inputBox w50">
-              <input type="email" required>
-              <span>Email Address</span>
-            </div>
-            <div class="inputBox w50">
-              <input type="text" required>
-              <span>Mobile Number</span>
-            </div>
-            <div class="inputBox w100">
-              <textarea required></textarea>
-              <span>Write your Feedback here...</span>
-            </div>
-            <div class="inputBox w100">
-              <input type="submit" value="Send">
-            </div>
-          </div>
-        </div>
-      </div> 
-    </div>    
-  </section>
+  
 </footer>
 
 <!-- Feedback -->
 
 </body>
 <script src="script.js"></script>
+<script type="module" src="register.js"></script>
 </html>
