@@ -28,10 +28,10 @@ let currentMessageIndex = 0;
 
 function hidePopup() {
     popup.style.display = 'none';
-    setTimeout(shoswPopup, 30000);
+    setTimeout(showPopup, 30000);
 }
 
-setTimeout(shoswPopup, 3000);
+setTimeout(showPopup, 3000);
 
 ;
 
