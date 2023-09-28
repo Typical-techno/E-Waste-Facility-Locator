@@ -21,7 +21,7 @@ const app = initializeApp(firebaseConfig);
 
   document.getElementById("submit").addEventListener('click', function(e){
     e.preventDefault();
-    set(ref(db, 'Requests' + document.getElementById("name").value),
+    set(ref(db, 'Requests/' + document.getElementById("name").value),
   {
 
     Name: document.getElementById("name").value,

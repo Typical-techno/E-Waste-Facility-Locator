@@ -56,3 +56,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 // About Section Counter
 
+document.getElementById("")
