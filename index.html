@@ -24,6 +24,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#" onclick="login()" id="llss">Login</a></li>
+        <li><a href="#" id="llsso" onclick="logout()" >Logout</a></li>
       </div>
     </div>
   </nav>
@@ -97,7 +98,7 @@
             <input type="password" placeholder="Password" id="password" required>
           </div>
           <div class="inputBox-b">
-            <button type="submit" value="Register" id="submit">Login</button>
+            <button type="submit" value="Register" id="submit-login">Login</button>
           </div>
         </div>
         <div class="form-link">
@@ -118,10 +119,10 @@
             <input type="text" placeholder="Name" id="name-sign" required>
           </div>  
           <div class="inputBox">
-            <input type="text" placeholder="Email" id="email-sign" required>
+            <input type="email" placeholder="Email" id="email-sign" required>
           </div>
           <div class="inputBox">
-            <input type="password" placeholder="Password" id="password-sign" onchange="showpass()" required>
+            <input type="password" placeholder="Password" id="password-sign" required>
           </div>
           <div class="inputBox">
             <input type="text" placeholder="Confirm Password" id="confirm-pass"required>

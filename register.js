@@ -1,9 +1,8 @@
 // Register Form
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
-
-
+import { getDatabase, ref, set, get, child, onValue } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 const firebaseConfig = {
   apiKey: "AIzaSyAT2TWMzFjVvQgQdYDXEAJO_UoMYE5YBtw",
   authDomain: "e-waste-project-a6450.firebaseapp.com",
@@ -15,14 +14,20 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getDatabase(app);
 
+const token = localStorage.getItem('token')
+if(token){
+  document.getElementById('llss').hidden = true
+  document.getElementById('llsso').style.display = 'flex'
+}
 
-  const db = getDatabase(app);
 
 
   document.getElementById("submit").addEventListener('click', function(e){
     e.preventDefault();
-    set(ref(db, 'Requests/' + document.getElementById("name").value),
+    set(ref(db, 'Requests/' + document.getElementById("mobile-number").value),
   {
 
     Name: document.getElementById("name").value,
@@ -34,15 +39,44 @@ const app = initializeApp(firebaseConfig);
   alert("Device Registered Succesfully  !");
   });
 
-  document.getElementById("submit-sign").addEventListener('click', function(e){
-    e.preventDefault();
-    set(ref(db, 'Accounts/' + document.getElementById("name-sign").value),
-  {
+  document.getElementById('submit-sign').addEventListener('click',(e) => {
 
-    name: document.getElementById("name-sign").value,
-    email: document.getElementById("email-sign").value,
-    password: document.getElementById("password-sign").value   
+    const email = document.getElementById('email-sign').value;
+    const password = document.getElementById('password-sign').value;
 
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    alert('User Created')
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage);
+    // ..
   });
-  alert("Sign Up  Succesfully  !");
+  })
+
+  document.getElementById('submit-login').addEventListener('click',(e) => {
+
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  
+
+    signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    console.log(userCredential._tokenResponse.idToken);
+    alert('Logged In');
+    localStorage.setItem('token',userCredential._tokenResponse.idToken)
+    location.reload()
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage)
   });
+  })
