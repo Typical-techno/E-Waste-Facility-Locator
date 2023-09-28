@@ -3,7 +3,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
 import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
-// Your web app's Firebase configuration
+
 const firebaseConfig = {
   apiKey: "AIzaSyAT2TWMzFjVvQgQdYDXEAJO_UoMYE5YBtw",
   authDomain: "e-waste-project-a6450.firebaseapp.com",
@@ -13,11 +13,12 @@ const firebaseConfig = {
   messagingSenderId: "979062024052",
   appId: "1:979062024052:web:f86ca3886d6dd109346e21"
 };
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 
-//get ref to database services
+
   const db = getDatabase(app);
+
 
   document.getElementById("submit").addEventListener('click', function(e){
     e.preventDefault();
@@ -27,8 +28,24 @@ const app = initializeApp(firebaseConfig);
     Name: document.getElementById("name").value,
     Mobile: document.getElementById("mobile-number").value,
     Company: document.getElementById("device-company").value,
-    Model: document.getElementById("device-model").value
+    Model: document.getElementById("device-model").value,
 
   });
-    alert("Device Registered Succesfully  !");
-  })
+  alert("Device Registered Succesfully  !");
+  });
+
+  document.getElementById("submit-sign").addEventListener('click', function(e){
+    e.preventDefault();
+    set(ref(db, 'Accounts/' + document.getElementById("name-sign").value),
+  {
+
+    name: document.getElementById("name-sign").value,
+    email: document.getElementById("email-sign").value,
+    password: document.getElementById("password-sign").value   
+
+  });
+  alert("Sign Up  Succesfully  !");
+  });
+
+
+

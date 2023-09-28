@@ -23,7 +23,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#">Login/SignUp</a></li>
+        <li><a href="#" onclick="login()" id="llss">Login</a></li>
       </div>
     </div>
   </nav>
@@ -69,7 +69,7 @@
             <span>Device's Company</span>
           </div>
           <div class="inputBox">
-            <input type="email" id="device-model" required>
+            <input type="text" id="device-model" required>
             <span>Model Number</span>
           </div>
           <div class="inputBox">
@@ -79,14 +79,65 @@
           <div class="inputBox-b">
             <button type="submit" value="Register" id="submit">Send</button>
           </div>
-          <div class="inputBox-bs">
-            <button type="submit" value="Register" id="submit">Send</button>
-          </div>
         </div>
       </div>
     </div> 
   </div> 
 </div>
+<div id="login">
+  <div class="form">
+    <div class="container">
+      <div class="loginform">
+        <h2>Login</h2>
+        <div class="formBox">
+          <div class="inputBox">
+            <input type="text" placeholder="Email" id="email" required>
+          </div>
+          <div class="inputBox">
+            <input type="password" placeholder="Password" id="password" required>
+          </div>
+          <div class="inputBox-b">
+            <button type="submit" value="Register" id="submit">Login</button>
+          </div>
+        </div>
+        <div class="form-link">
+          <span>Don't have an account? <a href="#" class="link" onclick="signup()">Sign Up</a></span>
+      </div>
+      </div>
+    </div> 
+  </div> 
+</div>
+
+<div id="signup">
+  <div class="form">
+    <div class="container">
+      <div class="signupform">
+        <h2>Sign Up</h2>
+        <div class="formBox">
+          <div class="inputBox">
+            <input type="text" placeholder="Name" id="name-sign" required>
+          </div>  
+          <div class="inputBox">
+            <input type="text" placeholder="Email" id="email-sign" required>
+          </div>
+          <div class="inputBox">
+            <input type="password" placeholder="Password" id="password-sign" onchange="showpass()" required>
+          </div>
+          <div class="inputBox">
+            <input type="text" placeholder="Confirm Password" id="confirm-pass"required>
+          </div>
+          <div class="inputBox-b">
+            <button type="submit" value="Register" id="submit-sign">Create Account</button>
+          </div>
+        </div>
+        <div class="form-link">
+          <span>already Have an Account <a href="#" class="link" onclick="login()">Login</a></span>
+      </div>
+      </div>
+    </div> 
+  </div> 
+</div>
+
 </section>
 
 <!-- Hero Section -->

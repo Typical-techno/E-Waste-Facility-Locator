@@ -56,4 +56,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 // About Section Counter
 
-document.getElementById("")
+const register = document.getElementById('Register');
+const login_form = document.getElementById('login');
+const signup_form = document.getElementById('signup');
+
+function login(){
+  register.style.display = 'none';
+  login_form.style.display = 'block';
+  signup_form.style.display = 'none';
+}
+
+function signup(){
+  register.style.display = 'none';
+  login_form.style.display = 'none';
+  signup_form.style.display = 'block';
+}

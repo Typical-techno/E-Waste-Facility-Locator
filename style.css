@@ -816,6 +816,28 @@ transform: rotateZ(45deg);
   justify-content: right;
 }
 
+#Register .ls-btn{
+  display: flex;
+  margin: 50px 10px 10px 0px;
+  gap: 50px;
+  justify-content: center;
+}
+
+#Register .ls-btn button         
+{
+    position: relative;
+    cursor: pointer;
+    background: #095a55;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+    font-size: 20px;
+    height: 5vh;
+    width: 10vw;
+}
+
 /* Css for the submit button */
 #Register .container .registerform .formBox .inputBox-b button         
 {
@@ -836,6 +858,515 @@ transform: rotateZ(45deg);
     background: #0d9480;
 }
 
+
+
+#login{
+  margin: 0 15% 0 0;
+  display: none;
+}
+
+#login .title{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+#login .title h1{
+  display: inline;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 4px solid #1ACC8D;
+}
+
+#login .form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 80px; */
+}
+
+#login .container
+{
+  position: relative;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+  margin-right: 250px;
+}
+
+#login .container .contactInfo
+{
+    position: absolute;
+    top: 150px;
+    width: 350px;
+    height: 350px;
+    background: #1ACC8D;
+    z-index: 1;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15); 
+    border-radius: 22px;
+    transition: all 0.5s;
+}
+
+#login .container .contactInfo:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px black;
+}
+
+#login .container .contactInfo h2
+{
+    color: #fff;
+    font-size:24px;
+    font-weight: 500;
+    display: flex;
+    margin: 30px 30px 5px 35px;
+}
+
+#login .container .contactInfo{
+  gap: 5px;
+}
+
+#login .container .contactInfo ul.info 
+{
+   position: relative;
+   margin: 20px 0; 
+}
+
+#login .container .contactInfo ul.info li i{
+  margin: 0 10px 0 0;
+}
+
+#login .container .contactInfo ul.info li
+{
+   position: relative;
+   list-style: none;
+   display: flex;
+   margin: 20px 30px 40px 30px;
+   cursor: pointer;
+   align-items: center;
+}
+
+/* for gmail */
+#login .container .contactInfo ul.info li span a
+{
+    color: #fff;
+    text-decoration: none;
+    width: 30px;
+    min-width: 30px;
+    
+}
+
+#login .container .contactInfo ul.info li span:nth-child(1) img
+{
+    max-width: 100%;
+    filter: invert(1);
+}
+
+#login .container .contactInfo ul.info li span:nth-child(2)
+{
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+#login .container .contactInfo ul.sci
+{
+    position: relative;
+    display: flex;
+}
+
+#login .container .contactInfo ul.sci li
+{
+   list-style: none;  
+   margin-right: 15px;
+}
+
+#login .container .contactInfo ul.sci li a
+{
+   text-decoration: none;
+}
+
+#login .container .contactInfo ul.sci li a img
+{
+   filter: invert(1);
+}
+
+#login .container .loginform
+{
+    position: absolute;
+    padding: 70px 50px;
+    /* padding-left: 250px;
+    margin-left: 150px; */
+    width: 20vw;
+    height: inherit;
+    background: #fff; 
+    box-shadow: 0 50px 50px rgba(0,0,0,0.25);
+    border-radius: 22px;
+}
+
+#login .container .loginform h2
+{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#login .container .loginform .formBox
+{
+    position: relative;
+    padding-top: 30px;
+}
+
+#login .container .loginform .formBox .inputBox
+{
+    position: relative;
+    margin-bottom: 35px;
+}
+
+#login .container .loginform .formBox .inputBox input,
+#login .container .loginform .formBox .inputBox textarea 
+{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+    background-color: white;
+    border-radius: 0px;
+}
+
+#login .inputbox{
+  display: flex;
+  justify-content: right;
+}
+
+
+#login .container .loginform .formBox .inputBox textarea 
+{
+    height: 120px;
+}
+
+#login .container .loginform .formBox .inputBox span 
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 5px 0 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+#login .container .loginform .formBox .inputBox input:focus ~ span,
+#login .container .loginform .formBox .inputBox input:valid ~ span,
+#login .container .loginform .formBox .inputBox textarea:focus ~ span, 
+#login .container .loginform .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size:  12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+} 
+
+#login .inputBox-b{
+  display: flex;
+  justify-content: right;
+}
+
+/* Css for the submit button */
+#login .container .loginform .formBox .inputBox-b button         
+{
+    position: relative;
+    cursor: pointer;
+    background: #095a55;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+    font-size: 20px;
+    height: 5vh;
+    width: 10vw;
+}
+
+#login .container .loginform .formBox .inputBox-b button:hover{
+    background: #0d9480;
+}
+
+
+#login .form-link{
+  text-align: center;
+  margin-top: 30px;
+}
+
+#login .form-link .link{
+  color: blue;
+}
+
+
+#signup{
+  margin: 0 15% 0 0;
+  display: none;
+}
+
+#signup .title{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+#signup .title h1{
+  display: inline;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 4px solid #1ACC8D;
+}
+
+#signup .form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 80px; */
+}
+
+#signup .container
+{
+  position: relative;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+  margin-right: 250px;
+}
+
+#signup .container .contactInfo
+{
+    position: absolute;
+    top: 150px;
+    width: 350px;
+    height: 350px;
+    background: #1ACC8D;
+    z-index: 1;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15); 
+    border-radius: 22px;
+    transition: all 0.5s;
+}
+
+#signup .container .contactInfo:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px black;
+}
+
+#signup .container .contactInfo h2
+{
+    color: #fff;
+    font-size:24px;
+    font-weight: 500;
+    display: flex;
+    margin: 30px 30px 5px 35px;
+}
+
+#signup .container .contactInfo{
+  gap: 5px;
+}
+
+#signup .container .contactInfo ul.info 
+{
+   position: relative;
+   margin: 20px 0; 
+}
+
+#signup .container .contactInfo ul.info li i{
+  margin: 0 10px 0 0;
+}
+
+#signup .container .contactInfo ul.info li
+{
+   position: relative;
+   list-style: none;
+   display: flex;
+   margin: 20px 30px 40px 30px;
+   cursor: pointer;
+   align-items: center;
+}
+
+/* for gmail */
+#signup .container .contactInfo ul.info li span a
+{
+    color: #fff;
+    text-decoration: none;
+    width: 30px;
+    min-width: 30px;
+    
+}
+
+#signup .container .contactInfo ul.info li span:nth-child(1) img
+{
+    max-width: 100%;
+    filter: invert(1);
+}
+
+#signup .container .contactInfo ul.info li span:nth-child(2)
+{
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+#signup .container .contactInfo ul.sci
+{
+    position: relative;
+    display: flex;
+}
+
+#signup .container .contactInfo ul.sci li
+{
+   list-style: none;  
+   margin-right: 15px;
+}
+
+#signup .container .contactInfo ul.sci li a
+{
+   text-decoration: none;
+}
+
+#signup .container .contactInfo ul.sci li a img
+{
+   filter: invert(1);
+}
+
+#signup .container .signupform
+{
+    position: absolute;
+    padding: 70px 50px;
+    /* padding-left: 250px;
+    margin-left: 150px; */
+    width: 20vw;
+    height: inherit;
+    background: #fff; 
+    box-shadow: 0 50px 50px rgba(0,0,0,0.25);
+    border-radius: 22px;
+}
+
+#signup .container .signupform h2
+{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#signup .container .signupform .formBox
+{
+    position: relative;
+    padding-top: 30px;
+}
+
+#signup .container .signupform .formBox .inputBox
+{
+    position: relative;
+    margin-bottom: 35px;
+}
+
+#signup .container .signupform .formBox .inputBox input,
+#signup .container .signupform .formBox .inputBox textarea 
+{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+    background-color: white;
+    border-radius: 0px;
+}
+
+#signup .inputbox{
+  display: flex;
+  justify-content: right;
+}
+
+
+#signup .container .signupform .formBox .inputBox textarea 
+{
+    height: 120px;
+}
+
+#signup .container .signupform .formBox .inputBox span 
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 5px 0 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+#signup .container .signupform .formBox .inputBox input:focus ~ span,
+#signup .container .signupform .formBox .inputBox input:valid ~ span,
+#signup .container .signupform .formBox .inputBox textarea:focus ~ span, 
+#signup .container .signupform .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size:  12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+} 
+
+#signup .inputBox-b{
+  display: flex;
+  justify-content: right;
+}
+
+/* Css for the submit button */
+#signup .container .signupform .formBox .inputBox-b button         
+{
+    position: relative;
+    cursor: pointer;
+    background: #095a55;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 20px;
+    height: 5vh;
+    width: fit-content;
+}
+
+#signup .container .signupform .formBox .inputBox-b button:hover{
+    background: #0d9480;
+}
+
+
+#signup .form-link{
+  text-align: center;
+  margin-top: 30px;
+}
+
+#signup .form-link .link{
+  color: blue;
+}
 
 
 
