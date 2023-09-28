@@ -64,6 +64,12 @@ nav{
   border-radius: 0px 0px 100px 100px
 }
 
+#nav button{
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+}
+
 #nav i{
   display: none;
 }

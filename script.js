@@ -28,7 +28,7 @@ let currentMessageIndex = 0;
 
 function hidePopup() {
     popup.style.display = 'none';
-    setTimeout(showPopup, 30000);
+    setTimeout(showPopup, 5000);
 };
 
 setTimeout(showPopup, 3000);
@@ -70,4 +70,10 @@ function signup(){
   register.style.display = 'none';
   login_form.style.display = 'none';
   signup_form.style.display = 'block';
+}
+
+
+function Logout() {
+  localStorage.removeItem('token')
+  window.location.reload()
 }
