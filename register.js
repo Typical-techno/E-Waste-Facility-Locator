@@ -46,6 +46,3 @@ const app = initializeApp(firebaseConfig);
   });
   alert("Sign Up  Succesfully  !");
   });
-
-
-
