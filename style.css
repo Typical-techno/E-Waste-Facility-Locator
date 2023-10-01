@@ -43,7 +43,6 @@ section {
 
 /* Navbar */
 
-
 nav{
   position: fixed;
   top: 0;
@@ -54,6 +53,11 @@ nav{
 
 #nav #llsso{
   display: none;
+}
+
+#nav .logo img{
+  height: 250px;
+  width: auto;
 }
 
 #nav {
@@ -509,7 +513,8 @@ transform: rotateZ(45deg);
   width: 100%;
   margin: 0;
   padding: 50px;
-  height: 70vh;
+  height: auto;
+  display: block;
 }
 
 #faq h1{
@@ -1517,7 +1522,6 @@ transform: rotateZ(45deg);
 }
 #team .social-links a:hover{
   color: #6d6fffe8;
+
 }
-
-
 /* Team Section Start */
