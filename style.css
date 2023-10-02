@@ -209,8 +209,8 @@ a {
   display: flex;
   position: absolute;
   top: 30px;
-  left: 35px;
-  width: auto;
+  left: 5%;
+  width: 95%;
 }
 
 #hero #top img{
@@ -218,13 +218,71 @@ a {
   height: 5vh;
 }
 
+#hero #top ul li a::before{
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+#hero #top ul li a:hover::before{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  border-radius: 0px;
+}
+
+#hero #top ul li a:before{
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #1ACC8D;
+  z-index: -1;
+  transition: transform .3s ease;
+  border-radius: 0px;
+}
+
+#hero #top ul li a::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#hero #top ul li a:hover::after{
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+#hero #top ul li a:after{
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  z-index: -1;
+  background: white;
+  transition: transform .3s ease;
+  border-radius: 0px;
+}
+
 #hero #top ul{
-  display: flex;
-  position: relative;
   list-style-type: none;
-  align-items: center;
-  justify-content: right;
-  right: -350%;
+
+  border-radius: 50px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+/* #hero #top ul:hover{
+  background-color: #1ACC8D;
+  box-shadow: inset 0px 0px 15px 1px white,
+              0px 0px 15px 1px black;
+} */
+
+#hero #top .top-login{
+  position: absolute;
+  list-style-type: none;
+  left: 90%;
 }
 
 #hero #top #logout-btn{
@@ -1592,6 +1650,7 @@ transform: rotateZ(45deg);
 #team .profile-card:hover{
   border-radius: 10px;
   height: 260px;
+  border: 3px solid black;
 }
 #team .profile-card .img{
   position: relative;
@@ -1602,6 +1661,7 @@ transform: rotateZ(45deg);
 }
 #team .profile-card:hover .img{
   transform: translateY(-60px);
+  
 }
 #team .img img{
   width: 100%;
@@ -1613,6 +1673,7 @@ transform: rotateZ(45deg);
 #team .profile-card:hover img{
   border-radius: 10px;
   height: 85%;
+  border: 2px solid black;
 }
 #team .caption{
   text-align: center;
