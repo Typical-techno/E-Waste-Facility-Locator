@@ -56,18 +56,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 // About Section Counter
 
-const register = document.getElementById('Register');
+const register_form = document.getElementById('Register');
 const login_form = document.getElementById('login');
 const signup_form = document.getElementById('signup');
+const login_btn = document.getElementById('login-btn');
+const logout_btn = document.getElementById('logout-btn');
+const register_btn = document.getElementById('register-btn');
+
+function register(){
+  register_form.style.display = 'block';
+  login_form.style.display = 'none';
+  signup_form.style.display = 'none';
+  login_btn.style.display = 'block';
+  register_btn.style.display = 'none';
+}
 
 function login(){
-  register.style.display = 'none';
+  register_form.style.display = 'none';
   login_form.style.display = 'block';
   signup_form.style.display = 'none';
+  login_btn.style.display = 'none';
+  register_btn.style.display = 'block';
 }
 
 function signup(){
-  register.style.display = 'none';
+  register_form.style.display = 'none';
   login_form.style.display = 'none';
   signup_form.style.display = 'block';
 }

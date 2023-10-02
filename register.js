@@ -20,9 +20,10 @@ const db = getDatabase(app);
 
 const token = localStorage.getItem('token')
 if (token) {
-  document.getElementById('llss').hidden = true
-  document.getElementById('llsso').style.display = 'flex'
-}
+  document.getElementById('login-btn').hidden = true
+  document.getElementById('logout-btn').style.display = 'flex'
+};
+
 document.getElementById("submit").addEventListener('click', function (e) {
   e.preventDefault();
   if (token) {

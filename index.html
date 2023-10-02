@@ -12,23 +12,26 @@
   <body>
 
 <!-- Navbar -->
-
-<div class="navbar">  
-  <nav id="nav">
-    <div class="logo"><a href="./index.html"><img src="./img/logo.png"></a></div>
-    <i class="fa-solid fa-bars"></i>
-    <div class="menu-bar">
-      <div class="menu-tabs">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#" onclick="login()" id="llss">Login</a></li>
-        <li><button onclick="Logout()" id="llsso">Logout</button></li>
-      </div>
+<div id="nav-main">
+<nav id="nav">
+  <div class="menu-bar">
+    <div class="menu-tabs">
+      <li><i class="fa-solid fa-house"></i><a href="#hero">Home</a></li>
+      <li><i class="fa-solid fa-book-open"></i><a href="#about"></i>About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
+      <li><i class="fa-solid fa-circle-question"></i><a href="#faq">FAQ</a></li>
+      <li><i class="fa-solid fa-people-group"></i><a href="#team">Team</a></li>
+        <!-- <li><a href="#" onclick="login()" id="llss">Login</a></li>
+        <li><button onclick="Logout()" id="llsso">Logout</button></li> -->
     </div>
-  </nav>
+  </div>
+</nav>
+<div id="nav-down" class="nav-down-2"></div>
+<div id="nav-down" class="nav-down-1"></div>
+
+
+</div>
+
 <!-- Navbar -->
 
 <!-- Pop-up Section -->
@@ -45,6 +48,14 @@
 <!-- Hero Section -->
 
 <section id="hero">
+  <div id="top">
+    <a href="./index.html"><img src="./img/logo.png"></a>
+    <ul>
+      <li><a href="#" onclick="login()" id="login-btn">Login</a></li>
+      <li><a href="#" onclick="register()" id="register-btn">Register</a></li>
+      <li><a href="#" onclick="Logout()" id="logout-btn">Logout</a></li>
+    </ul>
+  </div>
   <div class="down-arrow"></div>
   <div class="hero-image">
     <img src="./assets/profile-pic.png" alt="hero-image" />
