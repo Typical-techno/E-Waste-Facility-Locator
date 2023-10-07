@@ -205,7 +205,7 @@ a {
 
 /* Hero Section */
 
-#hero #top{
+#top{
   display: flex;
   position: absolute;
   top: 30px;
@@ -213,23 +213,23 @@ a {
   width: 95%;
 }
 
-#hero #top img{
+#top img{
   width: auto;
   height: 5vh;
 }
 
-#hero #top ul li a::before{
+#top ul li a::before{
   transform: scaleX(0);
   transform-origin: bottom right;
 }
 
-#hero #top ul li a:hover::before{
+#top ul li a:hover::before{
   transform: scaleX(1);
   transform-origin: bottom left;
   border-radius: 0px;
 }
 
-#hero #top ul li a:before{
+#top ul li a:before{
   content: " ";
   display: block;
   position: absolute;
@@ -241,17 +241,17 @@ a {
   border-radius: 0px;
 }
 
-#hero #top ul li a::after{
+#top ul li a::after{
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-#hero #top ul li a:hover::after{
+#top ul li a:hover::after{
   transform: scaleX(0);
   transform-origin: bottom right;
 }
 
-#hero #top ul li a:after{
+#top ul li a:after{
   content: " ";
   display: block;
   position: absolute;
@@ -263,7 +263,7 @@ a {
   border-radius: 0px;
 }
 
-#hero #top ul{
+#top ul{
   list-style-type: none;
 
   border-radius: 50px;
@@ -273,23 +273,17 @@ a {
   transition: all 0.3s;
 }
 
-/* #hero #top ul:hover{
-  background-color: #1ACC8D;
-  box-shadow: inset 0px 0px 15px 1px white,
-              0px 0px 15px 1px black;
-} */
-
-#hero #top .top-login{
+#top .top-login{
   position: absolute;
   list-style-type: none;
   left: 90%;
 }
 
-#hero #top #logout-btn{
+#top #logout-btn{
   display: none;
 }
 
-#hero #top #register-btn{
+#top #register-btn{
   display: none;
 }
 
@@ -570,7 +564,6 @@ transform: rotateZ(45deg);
   text-align: center;
   pad: 0.7em 0;
   font-weight: 600;
-  line-height: 0;
 }
 
 
