@@ -54,14 +54,8 @@ nav{
   position: fixed;
   top: 90vh;
   z-index: 999999;
-  justify-content: space-around;
   align-items: center;
-}
-
-
-#nav .logo img{
-  height: 250px;
-  width: auto;
+  text-align: center;
 }
 
 #nav{
@@ -80,7 +74,6 @@ nav{
               rgba(0, 0, 0, 0.12) 0px 4px 6px,
               rgba(0, 0, 0, 0.17) 0px 12px 13px,
               rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  left: 36%;
   transition: all 0.5s;
 }
 
@@ -100,7 +93,6 @@ nav{
               rgba(0, 0, 0, 0.12) 0px 4px 6px,
               rgba(0, 0, 0, 0.17) 0px 12px 13px,
               rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  left: 36%;
   transition: all 0.5s;
   top: 90%;
 }
@@ -154,10 +146,7 @@ nav{
 }
 
 #nav i{
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   color: #1acc4f;
   transition: all 0.5s;
 }
@@ -207,60 +196,34 @@ a {
 
 #top{
   display: flex;
-  position: absolute;
-  top: 30px;
-  left: 5%;
-  width: 95%;
+  position: fixed;
+  width: 100%;
+  background-color: #6d6fff;
+  align-items: center;
 }
 
 #top img{
   width: auto;
   height: 5vh;
+  padding: 10px 0px 10px 0px;
 }
 
-#top ul li a::before{
-  transform: scaleX(0);
-  transform-origin: bottom right;
+#top #top-rotate{
+  animation: imagerotate 5s infinite;
+  padding: 10px 0px 10px 30px
 }
 
-#top ul li a:hover::before{
-  transform: scaleX(1);
-  transform-origin: bottom left;
-  border-radius: 0px;
+@keyframes imagerotate {
+  0% {
+    transform: rotateX(-360deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
 }
 
-#top ul li a:before{
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  inset: 0 0 0 0;
-  background: #1ACC8D;
-  z-index: -1;
-  transition: transform .3s ease;
-  border-radius: 0px;
-}
-
-#top ul li a::after{
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-#top ul li a:hover::after{
-  transform: scaleX(0);
-  transform-origin: bottom right;
-}
-
-#top ul li a:after{
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  inset: 0 0 0 0;
-  z-index: -1;
-  background: white;
-  transition: transform .3s ease;
-  border-radius: 0px;
+#top .top-login:hover{
+  background-color: #1ACC8D;
 }
 
 #top ul{
@@ -277,6 +240,8 @@ a {
   position: absolute;
   list-style-type: none;
   left: 90%;
+  background-color: white;
+  transition: all 0.3s;
 }
 
 #top #logout-btn{
@@ -291,16 +256,15 @@ a {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 90vh;
   padding-bottom: 200px;
   padding-top: 200px;
 }
 
 .hero-image {
   display: flex;
-  height: 400px;
+  height: 500px;
   width: 400px;
-  margin: auto 0;
+  margin: 0 10px 0 0;
 }
 
 .hero-image{
@@ -308,8 +272,10 @@ a {
 }
 
 .hero-text {
+  display: grid;
   align-self: center;
   text-align: center;
+  margin-left: 50px;
 }
 
 .hero-text h1 {
@@ -317,9 +283,10 @@ a {
   border-bottom: 4px solid rgb(26, 204, 141);
   display: flex;
   justify-content: center;
-  margin: 0px 100px 10px 95px;
+  margin: 0px 95px 10px 95px;
   font-size: 3rem;
   text-align: center;
+  align-items: center;
 }
 
 .hero-text p{
@@ -353,34 +320,6 @@ a {
   background: #1ACC8D;
   color: white;
   border: rgb(255, 255, 255);
-}
-
-.down-arrow{
-position: absolute;
-top: calc(90% - 80px);
-left: calc(50% - 14px);
-width: 0;
-height: 30px;
-border: 2px solid;
-border-radius: 2px;
-animation: jumpInfinite 1.5s infinite;
-}
-
-.down-arrow:hover{
-  color: #1ACC8D;
-}
-
-.down-arrow:after {
-content: " ";
-position: absolute;
-top: 12px;
-left: -10px;
-width: 16px;
-height: 16px;
-border-bottom: 4px solid;
-border-right: 4px solid;
-border-radius: 4px;
-transform: rotateZ(45deg);
 }
 
 @keyframes jumpInfinite {
@@ -683,8 +622,13 @@ transform: rotateZ(45deg);
   width: 100%;
   margin: 0;
   padding: 50px;
-  height: auto;
   display: block;
+  align-items: center;
+}
+
+#faq .faq-main{
+  position: relative;
+  top: 20%;
 }
 
 #faq h1{
@@ -1606,15 +1550,15 @@ transform: rotateZ(45deg);
 /* Team Section Start */
 
 #team{
-  height: inherit;
+  height: auto;
 }
 
-.main{
+#team .main{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   gap: 15px;
 }
 
